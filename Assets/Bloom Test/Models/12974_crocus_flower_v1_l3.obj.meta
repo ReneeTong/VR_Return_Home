@@ -3,7 +3,12 @@ guid: 7ef240eed6f8d85449636b143de30fe4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 12974_crocus_flowerMat
+    second: {fileID: 2100000, guid: b17479f3a8fb6ec49a38836156d942eb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
