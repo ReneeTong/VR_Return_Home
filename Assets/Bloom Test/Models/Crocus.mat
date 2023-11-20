@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Petal
+  m_Name: Crocus
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
   - _EMISSION
@@ -38,11 +38,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 9280b90dca1dbc64ca3adc37459a7dc7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ad872dcec652de45b54b97a217e1055, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9280b90dca1dbc64ca3adc37459a7dc7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ad872dcec652de45b54b97a217e1055, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -77,5 +77,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 15.999998, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 1.1921569, g: 1.1921569, b: 1.1921569, a: 1}
   m_BuildTextureStacks: []
