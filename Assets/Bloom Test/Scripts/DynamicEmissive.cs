@@ -5,15 +5,12 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Renderer))]
-public class BloomActivate : MonoBehaviour
+public class DynamicEmissive : MonoBehaviour
 {
 
     new Renderer renderer; // new hides the parent <renderer> property.
     Material material;
     Color emissionColor;
-
-    public GameObject xrCamera;
-    public GameObject xrOrigin;
 
     void Start()
     {
@@ -33,38 +30,16 @@ public class BloomActivate : MonoBehaviour
     IEnumerator Toggle()
     {
         bool toggle = false;
-        float newInten = 1f;
         while (true)
         {
-            yield return new WaitForSeconds(0.01f);
-            Tuple<double, double> dist = getDistance();
-            if (dist.Item1 <= 10 && dist.Item2 <= 10)
-            {
-                newInten = 5f;
-                toggle = true;
-            }
-            else if (dist.Item1 <= 20 && dist.Item2 <= 20)
-            {
-                newInten = 3f;
-                toggle = true;
-            }
-            else if (dist.Item1 <= 30 && dist.Item2 <= 30)
-            {
-                newInten = 2f;
-                toggle = true;
-            }
-            else
-            {
-                newInten = .05f;
-                toggle = false;
-            }
-            Activate(toggle, newInten);
-            /*toggle = true;*/
+            yield return new WaitForSeconds(1f);
+            Activate(toggle, Random.Range(0.5f, 5f));
+            toggle = !toggle;
         }
     }
 
     // Call this method to turn on or turn off emissive light.
-    public void Activate(bool on, float intensity)
+    public void Activate(bool on, float intensity = 3f)
     {
         if (on)
         {
@@ -98,21 +73,5 @@ public class BloomActivate : MonoBehaviour
             DynamicGI.UpdateEnvironment();
 
         }
-    }
-
-    Tuple<double, double> getDistance()
-    {
-        // get player location 
-        // get flower location
-        double xLoc = /*xrOrigin.transform.position.x*/ -xrCamera.transform.position.x;
-        double zLoc = /*xrOrigin.transform.position.z*/ -xrCamera.transform.position.z;
-        // figure out difference
-
-        double xDiff = Math.Abs(this.transform.position.x) - Math.Abs(xLoc);
-        double zDiff = Math.Abs(this.transform.position.z) - Math.Abs(zLoc);
-
-        return new Tuple<double, double>(Math.Abs(xDiff), Math.Abs(zDiff));
-
-        // return new Tuple<double, double>(50, 50);
     }
 }
