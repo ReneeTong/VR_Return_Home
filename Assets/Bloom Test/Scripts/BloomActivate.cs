@@ -15,6 +15,7 @@ public class BloomActivate : MonoBehaviour
     public GameObject xrCamera;
     public GameObject xrOrigin;
 
+
     void Start()
     {
         // Gets access to the renderer and material components as we need to
@@ -27,16 +28,16 @@ public class BloomActivate : MonoBehaviour
         emissionColor = material.GetColor("_EmissionColor");
 
         // Start a coroutine to toggle the light on / off.
-        StartCoroutine(Toggle());
+        /*StartCoroutine(*/Toggle()/*)*/;
     }
 
-    IEnumerator Toggle()
+    /*IEnumerator*/void  Toggle()
     {
         bool toggle = false;
         float newInten = 1f;
-        while (true)
-        {
-            yield return new WaitForSeconds(0.01f);
+        //while (true)
+        //{
+            // yield return new WaitForSeconds(0.01f);
             Tuple<double, double> dist = getDistance();
             if (dist.Item1 <= 10 && dist.Item2 <= 10)
             {
@@ -53,14 +54,14 @@ public class BloomActivate : MonoBehaviour
                 newInten = 2f;
                 toggle = true;
             }
-            else
+        else
             {
                 newInten = .05f;
                 toggle = false;
             }
             Activate(toggle, newInten);
             /*toggle = true;*/
-        }
+        // }
     }
 
     // Call this method to turn on or turn off emissive light.
@@ -114,5 +115,10 @@ public class BloomActivate : MonoBehaviour
         return new Tuple<double, double>(Math.Abs(xDiff), Math.Abs(zDiff));
 
         // return new Tuple<double, double>(50, 50);
+    }
+
+    void Update()
+    {
+        Toggle();
     }
 }

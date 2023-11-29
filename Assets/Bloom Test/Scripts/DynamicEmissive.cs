@@ -12,6 +12,11 @@ public class DynamicEmissive : MonoBehaviour
     Material material;
     Color emissionColor;
 
+    private float waitTime = 2.0f;
+    private float timer = 0.0f;
+
+    bool toggle = false;
+
     void Start()
     {
         // Gets access to the renderer and material components as we need to
@@ -24,18 +29,18 @@ public class DynamicEmissive : MonoBehaviour
         emissionColor = material.GetColor("_EmissionColor");
 
         // Start a coroutine to toggle the light on / off.
-        StartCoroutine(Toggle());
+        /*StartCoroutine(*/Toggle()/*)*/;
     }
 
-    IEnumerator Toggle()
+    /*IEnumerator*/void Toggle()
     {
-        bool toggle = false;
-        while (true)
-        {
-            yield return new WaitForSeconds(1f);
+        // bool toggle = false;
+        // while (true)
+       // {
+            // yield return new WaitForSeconds(1f);
             Activate(toggle, Random.Range(0.5f, 5f));
             toggle = !toggle;
-        }
+        //}
     }
 
     // Call this method to turn on or turn off emissive light.
@@ -73,5 +78,22 @@ public class DynamicEmissive : MonoBehaviour
             DynamicGI.UpdateEnvironment();
 
         }
+    }
+
+    void Update()
+    {
+        timer += Time.deltaTime;
+
+        // Check if we have reached beyond 3 seconds.
+        // Subtracting two is more accurate over time than resetting to zero.
+        if (timer > waitTime)
+        {
+            Toggle();
+
+
+            // Remove the recorded 3 seconds.
+            timer = 0;
+        }
+        
     }
 }
