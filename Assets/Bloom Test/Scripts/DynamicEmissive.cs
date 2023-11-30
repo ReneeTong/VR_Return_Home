@@ -38,13 +38,13 @@ public class DynamicEmissive : MonoBehaviour
         // while (true)
        // {
             // yield return new WaitForSeconds(1f);
-            Activate(toggle, Random.Range(0.5f, 5f));
+            Activate(toggle, 3f /*Random.Range(1f, 5f)*/);
             toggle = !toggle;
         //}
     }
 
     // Call this method to turn on or turn off emissive light.
-    public void Activate(bool on, float intensity = 3f)
+    public void Activate(bool on, float intensity)
     {
         if (on)
         {
