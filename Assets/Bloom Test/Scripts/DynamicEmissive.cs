@@ -15,7 +15,12 @@ public class DynamicEmissive : MonoBehaviour
     private float waitTime = 2.0f;
     private float timer = 0.0f;
 
-    bool toggle = false;
+    private bool toggle = false;
+
+    public bool range = false;
+    public bool increment = false;
+
+    private float intensity = 0.5f;
 
     void Start()
     {
@@ -36,10 +41,26 @@ public class DynamicEmissive : MonoBehaviour
     {
         // bool toggle = false;
         // while (true)
-       // {
-            // yield return new WaitForSeconds(1f);
-            Activate(toggle, 3f /*Random.Range(1f, 5f)*/);
-            toggle = !toggle;
+        // {
+        // yield return new WaitForSeconds(1f);
+        if (range)
+        {
+            Activate(toggle, Random.Range(1f, 5f));
+        }
+        else if (increment)
+        {
+            if (intensity >= 5.0f)
+                intensity = 0.5f;
+            else
+                intensity += 0.5f;
+            Activate(toggle, intensity);
+        }
+        else
+        {
+            Activate(toggle, 3f);
+        }
+        
+        toggle = !toggle;
         //}
     }
 

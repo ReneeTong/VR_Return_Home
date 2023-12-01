@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08507161, g: 0.07869766, b: 0.055207446, a: 1}
+  m_IndirectSpecularColor: {r: 0.085034326, g: 0.07865348, b: 0.0551645, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -350,6 +350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1001 &18347667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -938,6 +940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 0
 --- !u!1001 &62433475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3060,6 +3064,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1
+  increment: 0
 --- !u!1001 &192253588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8347,6 +8353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 0
 --- !u!1001 &449959693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8438,6 +8446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1 &452400071
 GameObject:
   m_ObjectHideFlags: 0
@@ -12478,6 +12488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1
+  increment: 0
 --- !u!1 &667045571
 GameObject:
   m_ObjectHideFlags: 0
@@ -14752,6 +14764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 0
 --- !u!1001 &766067051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16556,6 +16570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 0
 --- !u!4 &852630072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8d542e93136f1f44e8ffe0dbe91433c0, type: 3}
@@ -19100,6 +19116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1
+  increment: 0
 --- !u!1001 &974886434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20485,6 +20503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1001 &1051348651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21832,6 +21852,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 0
 --- !u!1001 &1115047163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24486,6 +24508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1
+  increment: 0
 --- !u!1001 &1272647722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26120,6 +26144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 0
 --- !u!1 &1376518636
 GameObject:
   m_ObjectHideFlags: 0
@@ -33230,6 +33256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 0
 --- !u!1001 &1683127375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34144,6 +34172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1001 &1727072888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34520,6 +34550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1 &1748686076
 GameObject:
   m_ObjectHideFlags: 0
@@ -39633,6 +39665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1001 &1769073455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41279,6 +41313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1001 &1862342542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41522,6 +41558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1
+  increment: 0
 --- !u!1001 &1888979581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43350,6 +43388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1
+  increment: 0
 --- !u!1001 &1996164053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44680,6 +44720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08387fbbad7a5054aa41bc6dde8f224d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  increment: 1
 --- !u!1 &2053955135 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8049655837044818277, guid: 8d542e93136f1f44e8ffe0dbe91433c0, type: 3}
