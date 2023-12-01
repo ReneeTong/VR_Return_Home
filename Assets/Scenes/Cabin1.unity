@@ -11466,6 +11466,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 470008, guid: 6fb9a20e10189f14f9d91660fc2eb7c8, type: 3}
   m_PrefabInstance: {fileID: 574746680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &584560473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584560475}
+  - component: {fileID: 584560474}
+  m_Layer: 0
+  m_Name: day and night
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &584560474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584560473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c736c6ad13ee044da9cd9854706bf0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerMultiplier: 0.5
+  startHour: 24
+  timeText: {fileID: 0}
+  sunLight: {fileID: 499926691}
+  sunriseHour: 5
+  sunsetHour: 21
+  dayAmbientLight: {r: 0, g: 0, b: 0, a: 0}
+  nightAmbientLight: {r: 0.116894625, g: 0.109336056, b: 0.3679245, a: 0}
+  lightChangeCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxSunLightIntensity: 0
+  moonLight: {fileID: 0}
+  maxMoonLightIntensity: 0
+--- !u!4 &584560475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584560473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 255.41684, y: 52.35848, z: 234.98917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592297630
 GameObject:
   m_ObjectHideFlags: 0
