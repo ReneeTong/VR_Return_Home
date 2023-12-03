@@ -133,7 +133,7 @@ Shader "Unlit/Window"
                 blur *= .01;
                 
                 float2 projUv = i.grabUv.xy / i.grabUv.w;
-                projUv += drops.xy * _Distortion;
+                projUv += drops.xy * _Distortion * fade;
 
                 // average 
                 const float numSamples = 32;
