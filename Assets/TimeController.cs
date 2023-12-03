@@ -1,5 +1,3 @@
-//credit to https://www.youtube.com/watch?v=L4t2c1_Szdk&t=403s
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,54 +6,29 @@ using TMPro;
 
 public class TimeController : MonoBehaviour
 {
-    [SerializeField]
-    private float timerMultiplier;
-
-    [SerializeField]
-    private float startHour;
-
-    [SerializeField]
-    private TextMeshProUGUI timeText;
-
-    [SerializeField]
-    private Light sunLight;
-
-    [SerializeField]
-    private float sunriseHour;
-
-    [SerializeField]
-    private float sunsetHour;
-
-    [SerializeField]
-    private Color dayAmbientLight;
-
-    [SerializeField]
-    private Color nightAmbientLight;
-
-    [SerializeField]
-    private AnimationCurve lightChangeCurve;
-
-    [SerializeField]
-    private float maxSunLightIntensity;
-
-    [SerializeField]
-    private Light moonLight;
-
-    [SerializeField]
-    private float maxMoonLightIntensity;
+    [SerializeField] private float timerMultiplier;
+    [SerializeField] private float startHour;
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private Light sunLight;
+    [SerializeField] private float sunriseHour;
+    [SerializeField] private float sunsetHour;
+    [SerializeField] private Color dayAmbientLight;
+    [SerializeField] private Color nightAmbientLight;
+    [SerializeField] private AnimationCurve lightChangeCurve;
+    [SerializeField] private float maxSunLightIntensity;
+    [SerializeField] private Light moonLight;
+    [SerializeField] private float maxMoonLightIntensity;
+    [SerializeField] private Color dayFogColor; // New
+    [SerializeField] private Color nightFogColor; // New
 
     private DateTime currentTime;
-
     private TimeSpan sunriseTime;
-
     private TimeSpan sunsetTime;
-
 
     // Start is called before the first frame update
     void Start()
     {
         currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
-
         sunriseTime = TimeSpan.FromHours(sunriseHour);
         sunsetTime = TimeSpan.FromHours(sunsetHour);
     }
@@ -108,6 +81,14 @@ public class TimeController : MonoBehaviour
         float dotProduct = Vector3.Dot(sunLight.transform.forward, Vector3.down);
         sunLight.intensity = Mathf.Lerp(0, maxSunLightIntensity, lightChangeCurve.Evaluate(dotProduct));
         RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
+
+        // Determine if it's day or night and set the fog color accordingly
+        RenderSettings.fogColor = IsDaytime() ? dayFogColor : nightFogColor;
+    }
+
+    private bool IsDaytime()
+    {
+        return currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime;
     }
 
     private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime)
