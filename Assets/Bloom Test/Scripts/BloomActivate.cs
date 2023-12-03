@@ -109,8 +109,8 @@ public class BloomActivate : MonoBehaviour
         double zLoc = /*xrOrigin.transform.position.z*/ -xrCamera.transform.position.z;
         // figure out difference
 
-        double xDiff = Math.Abs(this.transform.position.x) - Math.Abs(xLoc);
-        double zDiff = Math.Abs(this.transform.position.z) - Math.Abs(zLoc);
+        double xDiff = /*Math.Abs(*/-this.transform.position.x/*)*/ - Math.Abs(xLoc);
+        double zDiff = /*Math.Abs(*/-this.transform.position.z/*)*/ - Math.Abs(zLoc);
 
         return new Tuple<double, double>(Math.Abs(xDiff), Math.Abs(zDiff));
 
