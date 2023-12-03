@@ -56,6 +56,11 @@ Shader "Unlit/Window"
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.grabUv = UNITY_PROJ_COORD(ComputeGrabScreenPos(o.vertex));
 
+                if (_ProjectionParams.x == 1)
+                {
+                    o.grabUv.y = 1 - o.grabUv.y;
+                }
+
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
