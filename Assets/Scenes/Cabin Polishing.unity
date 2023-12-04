@@ -6393,7 +6393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerMultiplier: 2000
-  startHour: 12
+  startHour: 19
   timeText: {fileID: 381332091}
   sunLight: {fileID: 1362437637}
   sunriseHour: 7
@@ -6411,6 +6411,8 @@ MonoBehaviour:
   maxMoonLightIntensity: 0
   dayFogColor: {r: 1, g: 0.9386792, b: 0.9386792, a: 0}
   nightFogColor: {r: 0, g: 0, b: 0, a: 0}
+  fogChangeDuration: 2000
+  fogChangeThreshold: 80
 --- !u!4 &1515558980
 Transform:
   m_ObjectHideFlags: 0

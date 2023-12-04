@@ -11662,6 +11662,8 @@ MonoBehaviour:
   maxMoonLightIntensity: 0
   dayFogColor: {r: 0.9716981, g: 0.93961376, b: 0.93961376, a: 0}
   nightFogColor: {r: 0, g: 0, b: 0, a: 0}
+  fogChangeDuration: 3000
+  fogChangeThreshold: 5
 --- !u!4 &584560475
 Transform:
   m_ObjectHideFlags: 0
