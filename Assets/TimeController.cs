@@ -40,6 +40,7 @@ public class TimeController : MonoBehaviour
         currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
         sunriseTime = TimeSpan.FromHours(sunriseHour);
         sunsetTime = TimeSpan.FromHours(sunsetHour);
+        RenderSettings.ambientLight = Color.black;
     }
 
     // Update is called once per frame
